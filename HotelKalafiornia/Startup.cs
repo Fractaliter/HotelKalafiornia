@@ -38,6 +38,8 @@ namespace HotelKalafiornia
             var connection = @"Server=(localdb)\mssqllocaldb;Database=HotelKalafiornia;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<BloggingContext>
                 (options => options.UseSqlServer(connection));
+            services.AddDbContext<HotelContext>
+                (options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

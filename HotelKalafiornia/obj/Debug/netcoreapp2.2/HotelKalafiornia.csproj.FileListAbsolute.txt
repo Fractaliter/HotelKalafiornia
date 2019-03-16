@@ -68,3 +68,8 @@ C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj
 C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\HotelKalafiornia.dll
 C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\HotelKalafiornia.pdb
 C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\HotelKalafiornia.csproj.CopyComplete
+C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\Views\Rooms\Create.g.cshtml.cs
+C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\Views\Rooms\Delete.g.cshtml.cs
+C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\Views\Rooms\Details.g.cshtml.cs
+C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\Views\Rooms\Edit.g.cshtml.cs
+C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\Views\Rooms\Index.g.cshtml.cs
