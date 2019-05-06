@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": "HotelKalafiornia\\bin\\Release\\netcoreapp2.2\\win-x86\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/a6fc6a4f-0af7-49f5-a4cc-765700c5e3c1/resourceGroups/HotelKalafiorniaStudent/providers/Microsoft.Web/sites/HotelKalafiornia"
+}
