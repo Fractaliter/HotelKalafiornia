@@ -85,9 +85,9 @@ namespace HotelKalafiornia.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BlogId,Url")] Blog blog)
+        public async Task<IActionResult> Edit(int BlogId, [Bind("BlogId,Url")] Blog blog)
         {
-            if (id != blog.BlogId)
+            if (BlogId != blog.BlogId)
             {
                 return NotFound();
             }
@@ -136,9 +136,9 @@ namespace HotelKalafiornia.Controllers
         // POST: Blogs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int BlogId)
         {
-            var blog = await _context.Blogs.FindAsync(id);
+            var blog = await _context.Blogs.FindAsync(BlogId);
             _context.Blogs.Remove(blog);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

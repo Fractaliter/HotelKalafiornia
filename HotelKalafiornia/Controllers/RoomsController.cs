@@ -85,9 +85,9 @@ namespace HotelKalafiornia.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("RoomId,RoomType,PricePerNight,MaxPersons,IsLocked")] Room room)
+        public async Task<IActionResult> Edit(int RoomId, [Bind("RoomId,RoomType,PricePerNight,MaxPersons,IsLocked")] Room room)
         {
-            if (id != room.RoomId)
+            if (RoomId != room.RoomId)
             {
                 return NotFound();
             }
@@ -110,6 +110,16 @@ namespace HotelKalafiornia.Controllers
                         throw;
                     }
                 }
+                 catch (DbUpdateException)
+             {
+            //Log the error (uncomment ex variable name and write a log.)
+            ModelState.AddModelError("", "Unable to save changes. " +
+                "Try again, and if the problem persists, " +
+                "see your system administrator.");
+                Console.WriteLine("Unable to save changes. " +
+                "Try again, and if the problem persists, " +
+                "see your system administrator.");
+             }
                 return RedirectToAction(nameof(Index));
             }
             return View(room);
@@ -136,12 +146,24 @@ namespace HotelKalafiornia.Controllers
         // POST: Rooms/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int RoomId)
         {
-            var room = await _context.Rooms.FindAsync(id);
+            var room = await _context.Rooms.FindAsync(RoomId);
+            if (room == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            try
+              {
             _context.Rooms.Remove(room);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+               }
+              catch (DbUpdateException /* ex */)
+             {
+        //Log the error (uncomment ex variable name and write a log.)
+                  return RedirectToAction(nameof(Delete), new { id = RoomId, saveChangesError = true });
+              }
         }
 
         private bool RoomExists(int id)
