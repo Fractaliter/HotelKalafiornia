@@ -74,3 +74,4 @@ C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj
 C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\Views\Rooms\Edit.g.cshtml.cs
 C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\Views\Rooms\Index.g.cshtml.cs
 C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\wwwroot\Index.g.cshtml.cs
+C:\Users\kwawrzkiewicz\Desktop\Private\GIT\HotelKalafiornia\HotelKalafiornia\obj\Debug\netcoreapp2.2\Razor\Views\Home\PartyInvites.g.cshtml.cs

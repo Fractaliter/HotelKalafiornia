@@ -2789,6 +2789,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Home\\PartyInvites.cshtml",
+      "TargetPath": "Views\\Home\\PartyInvites.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Blogs\\Details.cshtml",
       "TargetPath": "Views\\Blogs\\Details.cshtml",
       "FileKind": "mvc"

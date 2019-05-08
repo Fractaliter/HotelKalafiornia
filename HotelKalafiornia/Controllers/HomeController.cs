@@ -19,7 +19,12 @@ namespace HotelKalafiornia.Controllers
         {
             return View();
         }
-       
+        public IActionResult PartyInvites()
+        {
+            int hour = DateTime.Now.Hour;            
+            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon" + ". It's: "+ hour.ToString();
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

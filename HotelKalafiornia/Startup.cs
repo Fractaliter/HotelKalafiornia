@@ -35,11 +35,22 @@ namespace HotelKalafiornia
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=HotelKalafiornia;Trusted_Connection=True;ConnectRetryCount=0";
+            string connection;
+           // if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+            
+                connection = @"Server=tcp:kalafior.database.windows.net,1433;Initial Catalog=HotelKalafiorniaDB;Persist Security Info=False;User ID=Kris;Password=Filek123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            
+        
+            
+             //    connection = @"Server=(localdb)\mssqllocaldb;Database=HotelKalafiornia;Trusted_Connection=True;ConnectRetryCount=0";
+            
+        
             services.AddDbContext<BloggingContext>
                 (options => options.UseSqlServer(connection));
             services.AddDbContext<HotelContext>
                 (options => options.UseSqlServer(connection));
+                services.BuildServiceProvider().GetService<HotelContext>().Database.Migrate();
+                services.BuildServiceProvider().GetService<BloggingContext>().Database.Migrate();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
